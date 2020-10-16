@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Trivia - Squack 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="icon" type="image/png" href="C:\Users\wjaft\Desktop\Portafolio Beta\img\favicon.ico" />
+	<meta name="author" content="Juan Carlos & Jafet Brito">
+    <meta name="description" content="Trivia game">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <style>
+		body {
+		background-color: rgba(245, 82, 82, 0.93);
+		background-image: 	
+		}
+        .col-md-12 {
+            width: 30%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+    </style>
+</head>
+<!-- version alternativa del fondo del body, se llama u.gif -->
+<body background="quiza.gif" >
+
+	<header>
+	
+
+	
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Squack ONE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Conctact
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">JC</a>
+          <a class="dropdown-item" href="#">JB</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    </header>
+
+        <div class="container mt-5">
+            <h1 class="bg-dark text-warning" align=center>Welcome to Universal Trivia</h1>
+            <p class="bg-dark text-success" align=center>You are about to start a fun round of questions, show your knowledge, beat your score and challenge your friends.</p> 
+        </div>
+		<div class="col-md-12">
+        <img src="./inicio.gif" class="img-fluid" class="bg-dark" alt="Imagen de inicio">
+		<img src="..." class="img-fluid" alt="Responsive image">
+		<img src="/inicio.gif" alt="..." class="img-thumbnail">
+		</div>
+		
+		<div class="container mt-5">
+		<h3 class="bg-dark text-warning" align=center> This web site is desing by J. J. with Trivia API<h3>
+		<h4 class="bg-info text-white" align=center> A look </h4>
+		
+		<div class="card-group">
+  <div class="card">
+    <img src="./ejemplo.gif" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-success">Historia</h5>
+      <p class="card-text">demuestra tu habilidad en historia lorem, lorem, lorem lorem, lorem.</p>
+      
+    </div>
+  </div>
+  <div class="card">
+    <img src="./ejemplo.gif" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Cine</h5>
+      <p class="card-text">Tdemuestra que haz visto todas las peliculas lore, lorem, lorem, lorerm.</p>
+      
+    </div>
+  </div>
+  <div class="card">
+    <img src="./ejemplo.gif" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Ciencia ficcion</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      
+    </div>
+  </div>
+</div>
+    
+  </div>
+  
+</div>
+		
+		</div>
+		
+				<!-- Que sirva para identificar al usuario, no esta conectada a js -->
+<form>
+  <div class="form-group">
+    <label for="formGroupExampleInput">Example label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingresa tu nombre">
+  </div>
+		
+		
+
+
+    
+    <div class="container mt-5">
+        <div>
+            <div class="form-group">
+                <label for="questions-number">Elige cuántas preguntas quieres</label>
+                <select onchange="getQuestions()" class="form-control" id="questions-number">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="questions-category">Elige que categoria quieres</label>
+                <select onchange="getQuestions()" class="form-control" id="questions-category">
+                    <option value="any">Any Category</option>
+                    <option value="9">General Knowledge</option>
+                    <option value="10">Entertainment: Books</option>
+                    <option value="11">Entertainment: Film</option>
+                    <option value="12">Entertainment: Music</option>
+                    <option value="13">Entertainment: Musicals &amp; Theatres</option>
+                    <option value="14">Entertainment: Television</option>
+                    <option value="15">Entertainment: Video Games</option>
+                    <option value="16">Entertainment: Board Games</option>
+                    <option value="17">Science &amp; Nature</option>
+                    <option value="18">Science: Computers</option>
+                    <option value="19">Science: Mathematics</option>
+                    <option value="20">Mythology</option>
+                    <option value="21">Sports</option>
+                    <option value="22">Geography</option>
+                    <option value="23">History</option>
+                    <option value="24">Politics</option>
+                    <option value="25">Art</option>
+                    <option value="26">Celebrities</option>
+                    <option value="27">Animals</option>
+                    <option value="28">Vehicles</option>
+                    <option value="29">Entertainment: Comics</option>
+                    <option value="30">Science: Gadgets</option>
+                    <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+                    <option value="32">Entertainment: Cartoon &amp; Animations</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="questions-difficulty">Elige que dificultad quieres</label>
+                <select onchange="getQuestions()" class="form-control" id="questions-difficulty">
+                    <option value="any">Any Difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="questions-type">Eige el tipo que quieres</label>
+                <select onchange="getQuestions()" class="form-control" id="questions-type">
+                    <option value="any">Any Difficulty</option>
+                    <option value="multiple">Multiple Choice</option>
+                    <option value="boolean">True / False</option>
+                </select>
+            </div>
+
+        </div>
+        <!-- Aquí van las tarjetas -->
+        <div id="container-cards">
+
+        </div>
+    </div>
+	
+	<div class="container mt-5">
+	<h1 class="bg-warning text-white">Score</h1>
+            <p class="bg-dark text-white">Score, score, score </p> 
+        </div>
+		
+
+	<footer>
+	<div class="">
+	<h1> </h1>
+	</footer>
+	
+	
+    <script src="./main.js"></script>
+</body>
+
+</html>
